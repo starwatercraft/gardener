@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/crop",
+    "textures": {
+      "crop": "gardener:block/hyacinth_crop_stage2"
+    }
+  }
+
