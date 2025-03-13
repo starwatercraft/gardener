@@ -1,7 +1,6 @@
 {
     "parent": "minecraft:block/cross",
     "textures": {
-      "cross": "gardener:block/hyacinth_crop_stage0"
+      "cross": "gardener:block/hyacinth_flower"
     }
   }
-

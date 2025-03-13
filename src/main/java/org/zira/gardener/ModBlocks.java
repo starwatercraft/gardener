@@ -1,0 +1,43 @@
+package org.zira.gardener;
+
+import java.util.function.Function;
+
+import org.zira.gardener.blocks.HyacinthCropBlock;
+import org.zira.gardener.blocks.HyacinthFlowerBlock;
+
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.Identifier;
+
+public class ModBlocks {
+
+    public static final Block HYACINTH_FLOWER = register("hyacinth_flower", HyacinthFlowerBlock::new,
+            HyacinthFlowerBlock.Settings
+                    .create().nonOpaque().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
+
+    public static final Block HYACINTH_CROP = register("hyacinth_crop", HyacinthCropBlock::new,
+            HyacinthCropBlock.Settings
+                    .create().nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+
+    private static Block register(String path, Function<AbstractBlock.Settings, Block> factory,
+            AbstractBlock.Settings settings) {
+        final Identifier identifier = Identifier.of("gardener", path);
+        final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
+
+        final Block block = Blocks.register(registryKey, factory, settings);
+        Items.register(block);
+        return block;
+    }
+
+    public static void initialize() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL)
+                .register((itemGroup) -> itemGroup.addAfter(Items.TORCHFLOWER, ModBlocks.HYACINTH_FLOWER));
+    }
+}
