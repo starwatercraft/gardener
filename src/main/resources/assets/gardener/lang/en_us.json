@@ -1,5 +1,7 @@
 {
     "item.gardener.hyacinth_flower": "Hyacinth",
     "item.gardener.hyacinth_seed": "Hyacinth seed",
-    "block.gardener.hyacinth_flower": "Hyacinth"
+    "block.gardener.hyacinth_flower": "Hyacinth",
+    "item.gardener.iris_flower": "Iris",
+    "block.gardener.iris_flower": "Iris"
 }

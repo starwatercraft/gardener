@@ -1,6 +1,8 @@
-{"replace":false,
+{
+  "replace": false,
   "values": [
     "#minecraft:flowers",
-    "gardener:hyacinth_flower"
+    "gardener:hyacinth_flower",
+    "gardener:dicentra_flower"
   ]
 }

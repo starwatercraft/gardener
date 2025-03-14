@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "gardener:hyacinth_flower",
-        "gardener:hyacinth_crop"
+        "gardener:hyacinth_crop",
+        "gardener:dicentra_flower"
     ]
 }
