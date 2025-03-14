@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKey;
@@ -22,6 +23,9 @@ public class ModBlocks {
             HyacinthFlowerBlock.Settings
                     .create().nonOpaque().noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS));
 
+    public static final Block POTTED_HYACINTH_FLOWER = registerPotBlock("potted_hyacinth_flower", HYACINTH_FLOWER,
+            Block.Settings.copy(Blocks.POTTED_ALLIUM).nonOpaque());
+
     public static final Block HYACINTH_CROP = register("hyacinth_crop", HyacinthCropBlock::new,
             HyacinthCropBlock.Settings
                     .create().nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
@@ -34,6 +38,18 @@ public class ModBlocks {
         final Block block = Blocks.register(registryKey, factory, settings);
         Items.register(block);
         return block;
+    }
+
+    // return register(id, (settings) -> {
+    //     return new BedBlock(color, settings);
+    //  }, Settings.create().mapColor((state) -> {
+
+    public static Block registerPotBlock(String name, Block block, Block.Settings settings) {
+        final Identifier identifier = Identifier.of("gardener", name);
+        final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);
+    
+        // Use Blocks.register instead of Registry.register
+        return Blocks.register(registryKey, (blockSettings) -> new FlowerPotBlock(block, blockSettings), settings);
     }
 
     public static void initialize() {

@@ -1,7 +1,7 @@
 {
     "variants": {
       "": {
-        "model": "minecraft:block/potted_hyacinth_flower"
+        "model": "gardener:block/potted_hyacinth_flower"
       }
     }
   }
