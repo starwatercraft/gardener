@@ -21,7 +21,7 @@ public class HyacinthFlowerBlock extends FlowerBlock {
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.GRASS_BLOCK) || floor.isOf(Blocks.PODZOL)
-                || floor.isOf(Blocks.COARSE_DIRT);
+                || floor.isOf(Blocks.COARSE_DIRT) || floor.isOf(Blocks.FARMLAND); 
     }
 
     @Override
