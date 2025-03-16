@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  #",
+        "Li ",
+        "/L "
+    ],
+    "key": {
+        "#": "minecraft:flint",
+        "L": "minecraft:leather",
+        "i": "minecraft:iron_ingot",
+        "/": "minecraft:stick"
+    },
+    "result": {
+        "id": "gardener:garden_knife",
+        "count": 1
+    }
+}

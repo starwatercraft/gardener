@@ -2,14 +2,17 @@ package org.zira.gardener;
 
 import java.util.function.Function;
 
+import org.zira.gardener.armor.SyntheticLeatherArmorMaterial;
+import org.zira.gardener.items.GardenKnifeItem;
+
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -18,9 +21,35 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
+    // ARMOR
+    public static final Item SYNTHETIC_HELMET = register(
+            "synthetic_helmet",
+            settings -> new ArmorItem(SyntheticLeatherArmorMaterial.INSTANCE, EquipmentType.HELMET, settings),
+            new Item.Settings()
+                    .maxDamage(EquipmentType.HELMET.getMaxDamage(SyntheticLeatherArmorMaterial.BASE_DURABILITY)));
+
+    public static final Item SYNTHETIC_CHESTPLATE = register(
+            "synthetic_chestplate",
+            settings -> new ArmorItem(SyntheticLeatherArmorMaterial.INSTANCE, EquipmentType.CHESTPLATE, settings),
+            new Item.Settings()
+                    .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(SyntheticLeatherArmorMaterial.BASE_DURABILITY)));
+
+    public static final Item SYNTHETIC_LEGGINGS = register(
+            "synthetic_leggings",
+            settings -> new ArmorItem(SyntheticLeatherArmorMaterial.INSTANCE, EquipmentType.LEGGINGS, settings),
+            new Item.Settings()
+                    .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(SyntheticLeatherArmorMaterial.BASE_DURABILITY)));
+
+    public static final Item SYNTHETIC_BOOTS = register(
+            "synthetic_boots",
+            settings -> new ArmorItem(SyntheticLeatherArmorMaterial.INSTANCE, EquipmentType.BOOTS, settings),
+            new Item.Settings()
+                    .maxDamage(EquipmentType.BOOTS.getMaxDamage(SyntheticLeatherArmorMaterial.BASE_DURABILITY)));
+    //
+
     public static final Item GARDEN_KNIFE = register(
             "garden_knife",
-            settings -> new SwordItem(ToolMaterial.STONE, 1f, 1f, settings),
+            settings -> new GardenKnifeItem(settings),
             new Item.Settings().maxDamage(250));
 
     public static final Item HYACINTH_SEEDS = register("hyacinth_seed",
