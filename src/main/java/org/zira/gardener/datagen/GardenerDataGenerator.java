@@ -12,5 +12,6 @@ public class GardenerDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = generator.createBuiltinResourcePack(Identifier.of(GardenerReference.MOD_ID));
 
         pack.addProvider(BlockLootTables::new);
+//        pack.addProvider(GardenerModelProvider::new);
     }
 }

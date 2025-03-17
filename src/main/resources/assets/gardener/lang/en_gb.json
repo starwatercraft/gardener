@@ -2,7 +2,14 @@
     "item.gardener.hyacinth_flower": "Hyacinth",
     "item.gardener.hyacinth_seed": "Hyacinth seed",
     "block.gardener.hyacinth_flower": "Hyacinth",
+
     "item.gardener.iris_flower": "Iris",
     "block.gardener.iris_flower": "Iris",
-    "item.gardener.garden_knife": "Garden knife"
+
+    "item.gardener.garden_knife": "Garden knife",
+
+    "item.gardener.wolf_leather_helmet": "Wolf helmet",
+    "item.gardener.wolf_leather_chestplate": "Wolf chestplate",
+    "item.gardener.wolf_leather_leggings": "Wolf leggings",
+    "item.gardener.wolf_leather_boots": "Wolf boots"
 }

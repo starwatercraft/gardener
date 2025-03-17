@@ -9,6 +9,4 @@ public class Gardener implements ModInitializer {
         ModItems.initialize();
         ModBlocks.initialize();
     }
-
-    
 }

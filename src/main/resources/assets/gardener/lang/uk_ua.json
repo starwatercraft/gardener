@@ -2,7 +2,14 @@
     "item.gardener.hyacinth_flower": "Гіацинт",
     "item.gardener.hyacinth_seed": "Насіння Гіацинту",
     "block.gardener.hyacinth_flower": "Гіацинт",
+
     "item.gardener.iris_flower": "Ірис",
     "block.gardener.iris_flower": "Ірис",
-        "item.gardener.garden_knife": "Садівний ніж"
+
+        "item.gardener.garden_knife": "Садівний ніж",
+
+        "item.gardener.wolf_leather_helmet": "Шолом з вовка",
+        "item.gardener.wolf_leather_chestplate": "Нагрудник з вовка",
+        "item.gardener.wolf_leather_leggings": "Штани з вовка",
+        "item.gardener.wolf_leather_boots": "Чоботи з вовка"
 }

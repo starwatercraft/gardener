@@ -3,7 +3,6 @@ package org.zira.gardener.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.client.render.RenderLayer;
-
 import org.zira.gardener.ModBlocks;
 
 public class GardenerClient implements ClientModInitializer {
@@ -16,5 +15,5 @@ public class GardenerClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.IRIS_FLOWER);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.POTTED_IRIS_FLOWER);
     }
-  
+
 }

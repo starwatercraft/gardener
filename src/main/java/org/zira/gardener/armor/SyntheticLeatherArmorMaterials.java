@@ -15,7 +15,7 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 
-public class SyntheticLeatherArmorMaterial {
+public class SyntheticLeatherArmorMaterials {
     public static final int BASE_DURABILITY = 215;
 
     public static final RegistryKey<EquipmentAsset> SYNTHETIC_ARMOR_MATERIAL_KEY = RegistryKey
