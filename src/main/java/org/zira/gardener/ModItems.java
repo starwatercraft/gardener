@@ -23,25 +23,25 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     // Wolf Leather ARMOR
-    public static final Item WOLF_LEATHER_HELMET = register("wolf_leather_helmet",
-            settings -> new ArmorItem(GardenerArmorMaterials.WOLF_LEATHER_ARMOR_MATERIAL, EquipmentType.HELMET,
-                    settings
-                            .maxDamage(EquipmentType.HELMET.getMaxDamage(15))),
-            new Item.Settings());
+//    public static final Item WOLF_LEATHER_HELMET = register("wolfleather_helmet",
+//            settings -> new ArmorItem(GardenerArmorMaterials.WOLF_LEATHER_ARMOR_MATERIAL, EquipmentType.HELMET,
+//                    settings
+//                            .maxDamage(EquipmentType.HELMET.getMaxDamage(15))),
+//            new Item.Settings());
 
-    public static final Item WOLF_LEATHER_CHESTPLATE = register("wolf_leather_chestplate",
+    public static final Item WOLF_LEATHER_CHESTPLATE = register("wolfleather_chestplate",
             settings -> new ArmorItem(GardenerArmorMaterials.WOLF_LEATHER_ARMOR_MATERIAL, EquipmentType.CHESTPLATE,
                     settings
                             .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(15))),
             new Item.Settings());
 
-    public static final Item WOLF_LEATHER_LEGGINGS = register("wolf_leather_leggings",
+    public static final Item WOLF_LEATHER_LEGGINGS = register("wolfleather_leggings",
             settings -> new ArmorItem(GardenerArmorMaterials.WOLF_LEATHER_ARMOR_MATERIAL, EquipmentType.LEGGINGS,
                     settings
                             .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(15))),
             new Item.Settings());
 
-    public static final Item WOLF_LEATHER_BOOTS = register("wolf_leather_boots",
+    public static final Item WOLF_LEATHER_BOOTS = register("wolfleather_boots",
             settings -> new ArmorItem(GardenerArmorMaterials.WOLF_LEATHER_ARMOR_MATERIAL, EquipmentType.BOOTS,
                     settings
                             .maxDamage(EquipmentType.BOOTS.getMaxDamage(15))),
@@ -128,20 +128,20 @@ public class ModItems {
                 .register((itemGroup) -> itemGroup.addAfter(Items.STONE_HOE,
                         ModItems.GARDEN_KNIFE));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
-                .register((itemGroup) -> itemGroup.addAfter(Items.LEATHER_BOOTS,
-                        ModItems.WOLF_LEATHER_HELMET));
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+//                .register((itemGroup) -> itemGroup.addAfter(Items.LEATHER_BOOTS,
+//                        ModItems.WOLF_LEATHER_HELMET));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
-                .register((itemGroup) -> itemGroup.addAfter(ModItems.WOLF_LEATHER_HELMET,
-                        ModItems.WOLF_LEATHER_CHESTPLATE));
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+//                .register((itemGroup) -> itemGroup.addAfter(ModItems.WOLF_LEATHER_HELMET,
+//                        ModItems.WOLF_LEATHER_CHESTPLATE));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
-                .register((itemGroup) -> itemGroup.addAfter(ModItems.WOLF_LEATHER_CHESTPLATE,
-                        ModItems.WOLF_LEATHER_LEGGINGS));
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
-                .register((itemGroup) -> itemGroup.addAfter(ModItems.WOLF_LEATHER_LEGGINGS,
-                        ModItems.WOLF_LEATHER_BOOTS));
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+//                .register((itemGroup) -> itemGroup.addAfter(ModItems.WOLF_LEATHER_CHESTPLATE,
+//                        ModItems.WOLF_LEATHER_LEGGINGS));
+//
+//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT)
+//                .register((itemGroup) -> itemGroup.addAfter(ModItems.WOLF_LEATHER_LEGGINGS,
+//                        ModItems.WOLF_LEATHER_BOOTS));
     }
 }

@@ -15,7 +15,7 @@ import net.minecraft.util.Util;
 public class GardenerArmorMaterials {
     public static final RegistryKey<ArmorMaterial> WOLF_LEATHER_KEY = RegistryKey.of(
             RegistryKey.ofRegistry(Identifier.of(GardenerReference.MOD_ID, "armor_material")),
-            Identifier.of(GardenerReference.MOD_ID, "wolf_leather"));
+            Identifier.of(GardenerReference.MOD_ID, "wolfleather"));
 
     public static final ArmorMaterial WOLF_LEATHER_ARMOR_MATERIAL = new ArmorMaterial(5,
             Util.make(new EnumMap<>(EquipmentType.class), map -> {
@@ -26,5 +26,5 @@ public class GardenerArmorMaterials {
                 map.put(EquipmentType.BODY, 3);
             }), 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, ItemTags.REPAIRS_LEATHER_ARMOR,
             RegistryKey.of(RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset")),
-                    Identifier.of(GardenerReference.MOD_ID, "wolf_leather")));
+                    Identifier.of(GardenerReference.MOD_ID, "wolfleather")));
 }

@@ -19,7 +19,7 @@ public class GardenerItemTagProvider extends FabricTagProvider.ItemTagProvider{
     @Override
     protected void configure(WrapperLookup wrapperLookup) {
                 getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-                .add(ModItems.WOLF_LEATHER_HELMET)
+                // .add(ModItems.WOLF_LEATHER_HELMET)
                 .add(ModItems.WOLF_LEATHER_CHESTPLATE)
                 .add(ModItems.WOLF_LEATHER_LEGGINGS)
                 .add(ModItems.WOLF_LEATHER_BOOTS);

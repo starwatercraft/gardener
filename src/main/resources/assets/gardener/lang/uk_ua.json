@@ -8,8 +8,8 @@
 
         "item.gardener.garden_knife": "Садівний ніж",
 
-        "item.gardener.wolf_leather_helmet": "Шолом з вовка",
-        "item.gardener.wolf_leather_chestplate": "Нагрудник з вовка",
-        "item.gardener.wolf_leather_leggings": "Штани з вовка",
-        "item.gardener.wolf_leather_boots": "Чоботи з вовка"
+        "item.gardener.wolfleather_helmet": "Шолом з вовка",
+        "item.gardener.wolfleather_chestplate": "Нагрудник з вовка",
+        "item.gardener.wolfleather_leggings": "Штани з вовка",
+        "item.gardener.wolfleather_boots": "Чоботи з вовка"
 }
