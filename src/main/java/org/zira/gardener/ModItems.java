@@ -2,7 +2,6 @@ package org.zira.gardener;
 
 import java.util.function.Function;
 
-import org.zira.gardener.armor.GardenerArmorMaterials;
 import org.zira.gardener.armor.SyntheticLeatherArmorMaterials;
 import org.zira.gardener.items.GardenKnifeItem;
 
