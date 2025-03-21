@@ -10,5 +10,8 @@
     "item.gardener.wolf_leather_helmet": "Шолом з вовчого хутра",
     "item.gardener.wolf_leather_chestplate": "Нагрудник з вовчого хутра",
     "item.gardener.wolf_leather_leggings": "Штани з вовчого хутра",
-    "item.gardener.wolf_leather_boots": "Чоботи з вовчого хутра"
+    "item.gardener.wolf_leather_boots": "Чоботи з вовчого хутра",
+
+    "itemGroup.gardener.main": "Gardener",
+    "itemGroup.gardener.crops": "Gardener: Зернові"
 }

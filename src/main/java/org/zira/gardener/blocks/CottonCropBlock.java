@@ -1,0 +1,63 @@
+package org.zira.gardener.blocks;
+
+import java.util.List;
+
+import org.zira.gardener.ModItems;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.ShapeContext;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.state.StateManager;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
+
+public class CottonCropBlock extends GardenerCropBlock{
+        private static final VoxelShape[] AGE_TO_SHAPE = new VoxelShape[] {
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 5.0D, 3.0D, 10.0D),
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 8.0D, 5.0D, 12.0D),
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 10.0D, 8.0D, 12.0D),
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 10.0D, 10.0D, 12.0D),
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 12.0D, 10.0D, 12.0D),
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 14.0D, 12.0D, 12.0D),
+            Block.createCuboidShape(4.0D, 0.0D, 4.0D, 16.0D, 14.0D, 12.0D)
+    };
+
+    public static final int MAX_AGE = 6;
+
+    public CottonCropBlock(Settings settings) {
+        super(settings);
+    }
+
+    @Override
+    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+        builder.add(AGE);
+    }
+
+    @Override
+    public int getMaxAge() {
+        return MAX_AGE;
+    }
+
+    @Override
+    protected ItemConvertible getSeedsItem() {
+        return ModItems.COTTON_SEEDS;
+    }
+
+    @Override
+    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return AGE_TO_SHAPE[getAge(state)];
+    }
+
+    @Override
+    protected int getGrowthAmount(World world) {
+        return 1;
+    }
+
+    @Override
+    public List<ItemConvertible> cuttedDrop() {
+        return List.of(ModItems.UNPROCESSED_COTTON);
+    } 
+}

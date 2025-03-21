@@ -11,5 +11,8 @@
     "item.gardener.wolf_leather_helmet": "Wolf helmet",
     "item.gardener.wolf_leather_chestplate": "Wolf chestplate",
     "item.gardener.wolf_leather_leggings": "Wolf leggings",
-    "item.gardener.wolf_leather_boots": "Wolf boots"
+    "item.gardener.wolf_leather_boots": "Wolf boots",
+
+    "itemGroup.gardener.main": "Gardener",
+    "itemGroup.gardener.crops": "Gardener: Crops"
 }

@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+      "cross": "gardener:block/crop/cotton_crop_stage3"
+    }
+  }
+
