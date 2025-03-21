@@ -1,4 +1,4 @@
-package org.zira.gardener.client;
+package org.zira.gardener.client.items;
 
 import java.util.function.Consumer;
 
@@ -23,6 +23,7 @@ import software.bernie.geckolib.animation.AnimationController;
 import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.util.GeckoLibUtil;
+import org.zira.gardener.client.renderers.WolfLeatherArmorRenderer;
 
 public class WolfLeatherArmorItem extends ArmorItem implements GeoItem {
 

@@ -46,7 +46,7 @@ public class ModBlocks {
 					.create().nonOpaque().noCollision().ticksRandomly().breakInstantly()
 					.sounds(BlockSoundGroup.CROP));
 
-	private static Block register(String path, Function<AbstractBlock.Settings, Block> factory,
+	public static Block register(String path, Function<AbstractBlock.Settings, Block> factory,
 			AbstractBlock.Settings settings) {
 		final Identifier identifier = Identifier.of("gardener", path);
 		final RegistryKey<Block> registryKey = RegistryKey.of(RegistryKeys.BLOCK, identifier);

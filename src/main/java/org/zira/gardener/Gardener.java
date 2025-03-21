@@ -8,5 +8,6 @@ public class Gardener implements ModInitializer {
     public void onInitialize() {
         ModItems.initialize();
         ModBlocks.initialize();
+        GardenerBlockEntities.initialize();
     }
 }

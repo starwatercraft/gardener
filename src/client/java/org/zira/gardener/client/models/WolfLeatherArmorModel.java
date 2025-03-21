@@ -1,7 +1,8 @@
-package org.zira.gardener.client;
+package org.zira.gardener.client.models;
 
 import org.jetbrains.annotations.Nullable;
 import org.zira.gardener.GardenerReference;
+import org.zira.gardener.client.items.WolfLeatherArmorItem;
 
 import net.minecraft.util.Identifier;
 import software.bernie.geckolib.model.GeoModel;

@@ -3,6 +3,10 @@ package org.zira.gardener.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -10,15 +14,32 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 
+import org.zira.gardener.GardenerBlockEntities;
 import org.zira.gardener.GardenerReference;
 import org.zira.gardener.ModBlocks;
 import org.zira.gardener.ModItems;
 import org.zira.gardener.armor.GardenerArmorMaterials;
+import org.zira.gardener.client.items.*;
+import org.zira.gardener.client.blocks.*;
+import org.zira.gardener.client.renderers.CottonGinnRenderer;
 
 public class GardenerClient implements ClientModInitializer {
+
+    public static final Block COTTON_GIN = ModBlocks.register("cotton_gin", CottonGinnBlock::new,
+            AbstractBlock.Settings
+                    .create().nonOpaque().noCollision().breakInstantly()
+                    .sounds(BlockSoundGroup.WOOD));
+
+    public static final BlockEntityType<CottonGinnBlockEntity> COTTON_GIN_ENTITY = GardenerBlockEntities.register(
+            "cotton_gin",
+            // For versions 1.21.2 and above,
+            // replace `BlockEntityType.Builder` with `FabricBlockEntityTypeBuilder`.
+            FabricBlockEntityTypeBuilder.create(CottonGinnBlockEntity::new, COTTON_GIN).build());
 
     public static final Item WolfLeatherHelmet = ModItems.register(
             "wolf_leather_helmet",
@@ -57,12 +78,15 @@ public class GardenerClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.POTTED_HYACINTH_FLOWER);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.IRIS_FLOWER);
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), ModBlocks.POTTED_IRIS_FLOWER);
+
+        BlockEntityRendererFactories.register(COTTON_GIN_ENTITY, context -> new CottonGinnRenderer());
+
         itemGroupCropsBuilder.entries((context, entries) -> {
-            entries.add(ModItems.HYACINTH_SEEDS);
             entries.add(ModBlocks.HYACINTH_FLOWER);
             entries.add(ModBlocks.IRIS_FLOWER);
-            entries.add(ModItems.COTTON_SEEDS);
             entries.add(ModItems.UNPROCESSED_COTTON);
+            entries.add(ModItems.HYACINTH_SEEDS);
+            entries.add(ModItems.COTTON_SEEDS);
         });
 
         itemGroupMainBuilder.entries((context, entries) -> {
